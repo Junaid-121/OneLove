@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    /* display: block; */
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Pour cacher les cœurs qui sortent de la fenêtre */
+    background-color: pink;
+}
+
+.body .container .show {
+    display: block;
+    animation: show 10s infinite;
+    -webkit-animation: show 1s infinite;
+}
+
+@keyframes show {
+    0% {
+        margin-top: 0;
+
+    }
+    50% {
+        margin-top: -5%;
+    }
+}
+
+.container {
+    text-align: center;
+    position: fixed;
+}
+
+#heartbeat-button, .Dorcas {
+    position: relative;
+}
+.body .container #heartbeat-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: solid pink;
+    transition: all 1.2s ease;
+    -webkit-transition: all 1.2s ease;
+    -moz-transition: all 1.2s ease;
+    -ms-transition: all 1.2s ease;
+    -o-transition: all 1.2s ease;
+}
+
+.body .container #heartbeat-button:hover {
+    background-color: pink;
+
+}
+
+.body .container #heart {
+    font-size: 400px;
+    color: red;
+    display: none;
+}
+
+#heart {
+    font-size: 10vw; /* Taille du cœur basée sur la largeur de l'écran */
+    color: red;
+    display: none;
+  }
+  
+.flying-heart {
+    position: absolute;
+    font-size: 2vw; /* Taille du cœur volant basée sur la largeur de l'écran */
+    color: red;
+    animation: flying-heart 5s linear infinite;
+}
+  
+@keyframes flying-heart {
+    0% {
+      transform: translateX(0) translateY(100vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100vw) translateY(-100vh);
+      opacity: 0;
+    }
+}
+
+.body .container .Dorcas {
+    color: rgb(252, 0, 42);
+    font-weight: bold;
+    text-transform: capitalize;
+    animation: Dorcas 2s infinite;
+    -webkit-animation: Dorcas 2s infinite;
+}
+
+@keyframes Dorcas {
+    0%, 10%, 13% {
+        text-shadow: 0 0 10px darkorange;
+        text-shadow: 0 0 10px rgb(9, 255, 0);
+        text-shadow: 0 0 10px rgb(255, 0, 234);
+
+    }
+    20%, 40%, 46% {
+        text-shadow: 0 0 10px rgb(247, 46, 163);
+        text-shadow: 0 0 10px rgb(43, 42, 42);
+        text-shadow: 0 0 10px rgb(230, 196, 8);
+    }
+
+    50%, 60%, 80%, 90%, 100% {
+        text-shadow: 1px 3px 10px black;
+        text-shadow: 2px 3px 10px pink;
+        text-shadow: 2px 2px 10px red;
+        text-shadow: 4px 3px 10px orangered;
+        text-shadow: 4px 1px 10px blue;
+    }
+}
+
+/* @keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    50% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+}
+} */
