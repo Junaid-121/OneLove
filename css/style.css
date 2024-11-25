@@ -37,7 +37,7 @@
     position: fixed;
 }
 
-#heartbeat-button, .Dorcas {
+#heartbeat-button, .dc {
     position: relative;
 }
 .body .container #heartbeat-button {
@@ -87,15 +87,15 @@
     }
 }
 
-.body .container .Dorcas {
+.body .container .dc {
     color: rgb(252, 0, 42);
     font-weight: bold;
     text-transform: capitalize;
-    animation: Dorcas 2s infinite;
-    -webkit-animation: Dorcas 2s infinite;
+    animation: dc 2s infinite;
+    -webkit-animation: dc 2s infinite;
 }
 
-@keyframes Dorcas {
+@keyframes dc {
     0%, 10%, 13% {
         text-shadow: 0 0 10px darkorange;
         text-shadow: 0 0 10px rgb(9, 255, 0);
